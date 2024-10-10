@@ -1,13 +1,9 @@
-import { auth } from '@/libs/auth';
-import SignOutForm from '@/components/SignOutForm';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SignInForm from './components/SignInForm';
 
 export const metadata: Metadata = {
-  title: 'Sign In page',
-  description: 'Description of the sign in page',
+  title: 'Blog page',
+  description: 'Blog page',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -15,22 +11,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function SignInPage() {
-  const session = await auth();
+export default async function BlogPage() {
 
-  if (session) {
-    return (
-      <div>
-        <h1>You are already signed in</h1>
-        <div className="flex gap-3 justify-center">
-          <Link href="/profile" className="primary-btn">
-            Profile
-          </Link>
-          <SignOutForm />
-        </div>
+  return (
+    <div>
+      <div className="flex gap-3 justify-center">
+        <Link href="/profile" className="primary-btn">
+          Home
+        </Link>
       </div>
-    );
-  }
-
-  return <SignInForm />;
+    </div>
+  );
 }

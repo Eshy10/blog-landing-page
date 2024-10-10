@@ -34,20 +34,38 @@
 }
 
 @layer components {
-  .btn {
-    @apply px-4 py-2 rounded;
+  .btn-container {
+    @apply flex justify-center items-center gap-4 rounded-lg font-semibold text-lg leading-7;
   }
-
-  .primary-btn {
-    @apply btn bg-blue-500 text-white;
+  
+  .btn-primary {
+    @apply bg-white text-[#0A2640];
   }
-
-  .secondary-btn {
-    @apply bgn bg-gray-500 text-white;
+  
+  .btn-secondary {
+    @apply bg-[#65E4A3] text-[#0A2640];
   }
-
-  .danger-btn {
-    @apply btn bg-red-500 text-white;
+  
+  .black-outline {
+    @apply border-2 border-[#0A2640];
+  }
+  
+  .btn-full {
+    @apply w-full;
+  }
+  
+  .hover:btn-container {
+    @apply font-bold;
+  }
+  
+  .disabled:btn-container {
+    @apply opacity-50 cursor-not-allowed;
+  }
+  
+  @media (max-width: 992px) {
+    .btn-container {
+      @apply w-full px-4 py-2;
+    }
   }
 
   .link {
