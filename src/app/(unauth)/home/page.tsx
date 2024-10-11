@@ -1,21 +1,25 @@
 import { Metadata } from 'next';
+import { Hero, CustomerStats, Faq, GetStarted, Services, Testimonials, Blog } from './components';
 
 export const metadata: Metadata = {
-  title: 'Product Page',
-  description: 'Description of the product page',
+  title: 'Landing Page',
+  description: 'Landing Page',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    // ... add more open graph meta tags
   },
 };
 
-export default function ProductPage() {
+export default function LandingPage() {
   return (
-    <div>
-      <h1>Product Page</h1>
-      <div className="flex gap-2">
-      </div>
-    </div>
+    <>
+      <Hero />
+      <Services />
+      <CustomerStats />
+      <Testimonials />
+      <Faq />
+      <Blog />
+      <GetStarted />
+    </>
   );
 }

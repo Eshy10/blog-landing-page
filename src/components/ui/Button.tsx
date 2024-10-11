@@ -6,7 +6,7 @@ interface ButtonProps {
   as?: 'button' | 'Link';
   color?: string;
   full?: boolean;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'dark';
   disabled?: boolean;
   loading?: boolean;
   icon?: ElementType;
@@ -35,7 +35,7 @@ export default function Button({
         ${className}
         btn-container
         ${full ? 'btn-full' : ''}
-        ${variant === 'primary' ? 'btn-primary' : 'btn-secondary'}
+        ${variant === 'primary' ? 'btn-primary' : variant === 'secondary' ? 'btn-secondary' : 'btn-dark'}
         ${outline === 'black' ? 'black-outline' : ''}
       `}
       onClick={onClick}

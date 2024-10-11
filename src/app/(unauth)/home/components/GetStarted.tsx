@@ -1,8 +1,30 @@
-export default function GetStarted() {
+import Button from "@/components/ui/Button";
 
+export default function GetStarted() {
   return (
-    <div className="flex flex-col rounded-lg bg-white text-dark gap-2 p-4">
-GetStarted
-    </div>
+    <section className="h-[391px] rounded-[12px] bg-[#0a2640] flex flex-col justify-center items-center bg-no-repeat bg-right-top bg-[url('../../images/Ellipse.svg')] mx-auto my-40">
+      <h2 className="text-white text-center font-manrope text-4xl font-normal leading-[72px] w-[700px] max-w-full">
+        An enterprise template to ramp up your company website
+      </h2>
+      <form>
+        <div className="flex items-center mt-8">
+          <label htmlFor="email">
+            <input
+              type="email"
+              id="email"
+              placeholder="Your email address"
+              className="w-[370px] h-14 rounded-full border-2 border-white bg-white px-5 max-w-full"
+            />
+          </label>
+          <Button
+            type="button"
+            className="ml-8 w-[210px] h-[60px] py-4 px-14"
+            variant="secondary"
+          >
+            Start now
+          </Button>
+        </div>
+      </form>
+    </section>
   );
 }

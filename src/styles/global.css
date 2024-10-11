@@ -45,6 +45,10 @@
   .btn-secondary {
     @apply bg-[#65E4A3] text-[#0A2640];
   }
+
+  .btn-dark {
+    @apply bg-[#0A2640] text-white;
+  }
   
   .black-outline {
     @apply border-2 border-[#0A2640];
