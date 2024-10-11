@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-6 py-8 w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 w-full">
         {logos.map((logo, index) => (
           <Image
             key={index}
@@ -76,7 +76,7 @@ export default function Hero() {
             alt={logo.alt}
             width={50}
             height={50}
-            className="h-6 md:h-8 w-full"
+            className="h-8 w-auto mx-auto"
           />
         ))}
       </div>

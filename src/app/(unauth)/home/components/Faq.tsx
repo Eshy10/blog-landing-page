@@ -22,7 +22,7 @@ export default function Faq() {
         />
       </div>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
-        <h2 className="text-3xl font-semibold w-[40%]">
+        <h2 className="text-3xl font-semibold w-[90%] md:w-[40%]">
           We connect our customers with the best, and help them keep up-and stay
           open.
         </h2>

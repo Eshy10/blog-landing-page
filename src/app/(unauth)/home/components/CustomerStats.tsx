@@ -103,7 +103,7 @@ export default function CustomerStats() {
         />
       </div>
 
-      <div className="mt-[20rem] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className=" my-[10rem] lg:mt-[20rem] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <Content
           title="We connect our customers with the best, and help them keep up-and stay open."
           items={[

@@ -1,21 +1,6 @@
-import { ElementType, MouseEventHandler, ReactNode } from 'react';
 import PropTypes from 'prop-types';
+import { ButtonProps } from '@/types/global';
 
-interface ButtonProps {
-  type?: 'button' | 'submit' | 'reset';
-  as?: 'button' | 'Link';
-  color?: string;
-  full?: boolean;
-  variant?: 'primary' | 'secondary' | 'dark';
-  disabled?: boolean;
-  loading?: boolean;
-  icon?: ElementType;
-  children?: ReactNode;
-  id?: string;
-  onClick?: MouseEventHandler;
-  className: string;
-  outline?: 'black';
-}
 
 export default function Button({
   type = 'button',

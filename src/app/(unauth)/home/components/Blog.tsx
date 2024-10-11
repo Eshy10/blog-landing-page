@@ -18,7 +18,7 @@ export default function Blog() {
         <p className="text-center mt-20 text-gray-500 text-lg">Blog</p>
         <p className="text-center text-[#0A2640] text-4xl w-[60%]">Value Proposition accelerator product management venture</p>
       </div>
-      <div className="mt-28 px-20">
+      <div className="mt-28 px-4 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
           {LATEST_NEWS.slice(0, visibleNews).map((news, index) => (
             <ProductCard product={news} key={index} />

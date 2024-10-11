@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Hero, CustomerStats, Faq, GetStarted, Services, Testimonials, Blog } from './components';
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 
 export default function LandingPage() {
@@ -12,27 +13,27 @@ export default function LandingPage() {
 
   return (
     <>
-      <section data-aos="fade-up">
+      <AnimatedSection animation="fade-up">
         <Hero />
-      </section>
-      <section data-aos="fade-right">
+      </AnimatedSection>
+      <AnimatedSection animation="fade-right">
         <Services />
-      </section>
-      <section data-aos="fade-left">
+      </AnimatedSection>
+      <AnimatedSection animation="fade-left">
         <CustomerStats />
-      </section>
-      <section data-aos="fade-up">
+      </AnimatedSection>
+      <AnimatedSection animation="fade-up" className="w-full">
         <Testimonials />
-      </section>
-      <section data-aos="zoom-in">
+      </AnimatedSection>
+      <AnimatedSection animation="zoom-in">
         <Faq />
-      </section>
-      <section data-aos="fade-up">
+      </AnimatedSection>
+      <AnimatedSection animation="fade-up">
         <Blog />
-      </section>
-      <section data-aos="flip-up" className="w-full">
+      </AnimatedSection>
+      <AnimatedSection animation="flip-up" className="w-full">
         <GetStarted />
-      </section>
+      </AnimatedSection>
     </>
   );
 }
