@@ -1,12 +1,27 @@
-export default function ServiceCard({ imageSrc, title }: { imageSrc: string; title: string }) {
+import Image from "next/image";
+
+export default function ServiceCard({
+  imageSrc,
+  title,
+}: {
+  imageSrc: string;
+  title: string;
+}) {
   return (
-    <div className="bg-white rounded-xl p-6 space-y-4">
-      <div className="rounded-lg bg-green-100 flex items-center justify-center h-40">
-        <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
-      </div>
-      <h3 className="text-lg font-bold">{title}</h3>
-      <a href="#" className="text-[#0A2640] font-semibold flex items-center space-x-2">
-        <span>Explore page</span> <span>&rarr;</span>
+    <div className="p-6 space-y-4 flex flex-col items-start">
+      <Image
+        src={imageSrc}
+        alt={title}
+        width={450}
+        height={386}
+        className="w-full"
+      />
+      <p className="text-base text-white mb-8">{title}</p>
+      <a
+        href="#"
+        className="text-white font-medium flex items-center !mt-8"
+      >
+        <span>Explore page</span> <span className="ml-2">&rarr;</span>
       </a>
     </div>
   );

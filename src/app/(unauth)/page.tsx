@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import LandingPage from './home/page';
 
 export const metadata: Metadata = {
-  title: 'Index page',
-  description: 'Description of the index page',
+  title: 'Landing page',
+  description: 'Landing Page for boldo',
   openGraph: {
     type: 'website',
     locale: 'en_US',

@@ -17,7 +17,7 @@ export interface StatCardProps {
     imageUrl: string;
     chartUrl: string;
     chartBgColor: string;
-    chartDescription: ReactNode;
+    children: ReactNode;
   }
   
 export  interface ContentProps {

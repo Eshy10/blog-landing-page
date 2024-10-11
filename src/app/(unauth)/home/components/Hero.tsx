@@ -1,24 +1,39 @@
-import Image from 'next/image';
-import Button from '@/components/ui/Button';
+import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
-
+  const logos = [
+    { src: "/assets/images/boldo-logo-full.svg", alt: "Boldo" },
+    { src: "/assets/images/presto-logo.svg", alt: "Presto" },
+    { src: "/assets/images/boldo-logo-full.svg", alt: "Boldo" },
+    { src: "/assets/images/presto-logo.svg", alt: "Presto" },
+    { src: "/assets/images/boldo-logo-short.svg", alt: "Boldo" },
+    { src: "/assets/images/presto-logo.svg", alt: "Presto" },
+  ];
   return (
-    <section className=" bg-white">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-10 bg-white">
-        <div className="md:w-1/2 text-center md:text-left space-y-4 md:space-y-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+    <section className="bg-white">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between py-10 bg-white">
+        <div className="md:w-3/5 text-center md:text-left space-y-4 md:space-y-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl md:leading-[1.3]  text-dark">
             Save time by building fast with Boldo Template
           </h1>
-          <p className="text-gray-600 text-lg md:text-xl">
-            Funding handshake buyer business-to-business metrics iPad partnership.
-            First mover advantage innovator success deployment non-disclosure.
+          <p className="text-gray-500 text-md md:text-lg w-11/12">
+            Funding handshake buyer business-to-business metrics iPad
+            partnership. First mover advantage innovator success deployment
+            non-disclosure.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <Button className="px-6 py-3 rounded-full font-semibold" variant='dark'>
+            <Button
+              className="px-6 py-3 rounded-full font-semibold"
+              variant="dark"
+            >
               Buy template
             </Button>
-            <Button className="px-6 py-3 rounded-full font-semibold" variant='primary' outline='black'>
+            <Button
+              className="px-6 py-3 rounded-full font-semibold"
+              variant="primary"
+              outline="black"
+            >
               Explore
             </Button>
           </div>
@@ -28,7 +43,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <Image
-                src="/images"
+                src="/assets/images/blue-card1.svg"
                 alt="image-1"
                 width={500}
                 height={300}
@@ -36,38 +51,34 @@ export default function Hero() {
               />
             </div>
             <Image
-              src="/images/"
+              src="/assets/images/graph2.svg"
               alt="image-2"
               width={200}
               height={150}
-              className="rounded-lg"
+              className="rounded-lg bg-[#394e63] p-2 h-[73%] w-full"
             />
             <Image
-              src="/images/"
-              alt="image-3"
+              src="/assets/images/blue-card2.svg"
+              alt="image-2"
               width={200}
               height={150}
-              className="rounded-lg"
+              className="rounded-lg w-full"
             />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 py-8 border-t border-gray-200 w-full max-w-6xl">
-        <img src="/path/to/logo-boldo.png" alt="Boldo" className="h-6 md:h-8" />
-        <img src="/path/to/logo-presto.png" alt="Presto" className="h-6 md:h-8" />
-        <img src="/path/to/logo-boldo.png" alt="Boldo" className="h-6 md:h-8" />
-        <img src="/path/to/logo-presto.png" alt="Presto" className="h-6 md:h-8" />
-        <img src="/path/to/logo-boldo.png" alt="Boldo" className="h-6 md:h-8" />
-      </div>
-      <div>
-        <Image
-          src="/images/"
-          alt="image-3"
-          width={200}
-          height={150}
-          className="rounded-lg"
-        />
+      <div className="flex justify-center gap-6 py-8 w-full">
+        {logos.map((logo, index) => (
+          <Image
+            key={index}
+            src={logo.src}
+            alt={logo.alt}
+            width={50}
+            height={50}
+            className="h-6 md:h-8 w-full"
+          />
+        ))}
       </div>
     </section>
   );

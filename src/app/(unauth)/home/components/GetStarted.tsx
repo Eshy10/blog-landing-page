@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function GetStarted() {
   return (
-    <section className="h-[391px] rounded-[12px] bg-[#0a2640] flex flex-col justify-center items-center bg-no-repeat bg-right-top bg-[url('../../images/Ellipse.svg')] mx-auto my-40">
+    <section className="h-[391px] rounded-[12px] bg-[#0a2640] flex flex-col justify-center items-center bg-no-repeat bg-right-top bg-[url('/assets/images/blue-ellipse.svg')] mx-auto my-40">
       <h2 className="text-white text-center font-manrope text-4xl font-normal leading-[72px] w-[700px] max-w-full">
         An enterprise template to ramp up your company website
       </h2>

@@ -1,14 +1,17 @@
-import Link from 'next/link';
-import { MENU_FOOTER } from '@/libs/data';
+import Link from "next/link";
+import Image from "next/image";
+import { MENU_FOOTER } from "@/libs/data";
 
 export default function Footer() {
   return (
-<footer className="flex flex-col md:flex-row justify-between p-4 md:px-20">
+    <footer className="flex flex-col md:flex-row justify-between p-4">
       <div className="flex flex-col md:w-2/5">
-        <img src={'/'} alt="logo" className="mb-4" />
-        <p className="text-gray-600 mb-3">
-          Social media validation business model canvas graphical user interface launch party
-          creative facebook iPad twitter.
+        <div className="relative w-24 h-12">
+          <Image src={"/assets/images/boldo-logo-full.svg"} alt="logo" fill />
+        </div>
+        <p className="text-gray-600 mb-3 w-[70%]">
+          Social media validation business model canvas graphical user interface
+          launch party creative facebook iPad twitter.
         </p>
         <p className="text-gray-600">All rights reserved.</p>
       </div>
@@ -21,11 +24,11 @@ export default function Footer() {
                 href={subMenu.link}
                 key={index}
                 className={`text-gray-600 text-lg py-2 hover:text-blue-500 ${
-                  subMenu.name === 'Careers' ? 'flex items-center' : ''
+                  subMenu.name === "Careers" ? "flex items-center" : ""
                 }`}
               >
                 {subMenu.name}
-                {menu.tag && subMenu.name === 'Careers' && (
+                {menu.tag && subMenu.name === "Careers" && (
                   <span className="flex items-center justify-center ml-2 px-2 py-1 rounded-full bg-green-400 text-gray-900 text-sm font-semibold">
                     Hiring
                   </span>
